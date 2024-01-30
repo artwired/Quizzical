@@ -1,7 +1,6 @@
-// CalcScore.jsx
 import React from "react";
 
-export default function CalcScore({ score, quizData, onPlayAgain }) {
+export default function CalcScore({ score, onPlayAgain }) {
   return (
     <div className="score-container">
       <p>{`You scored ${score}/5 correct answers`}</p>

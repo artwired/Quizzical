@@ -26,8 +26,7 @@ export default function QuestionsComponent({
 
   function handleAnswer(answer) {
     setSelectedAnswers((prevSelectedAnswers) => {
-      const updatedAnswers = { ...prevSelectedAnswers };
-      updatedAnswers[question] = answer;
+      const updatedAnswers = { ...prevSelectedAnswers, [question]: answer };
       return updatedAnswers;
     });
   }
@@ -42,15 +41,11 @@ export default function QuestionsComponent({
             className={`answer-btn ${
               selectedAnswers[question] === answer ? "clicked" : ""
             } ${
-              answersChecked &&
-              selectedAnswers[question] === answer &&
-              answer === correctAnswer
+              answersChecked && answer === correctAnswer
                 ? "correct"
-                : ""
-            } ${
-              answersChecked &&
-              selectedAnswers[question] === answer &&
-              answer !== correctAnswer
+                : answersChecked &&
+                  selectedAnswers[question] === answer &&
+                  answer !== correctAnswer
                 ? "wrong"
                 : ""
             }`}
