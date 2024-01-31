@@ -33,6 +33,12 @@ h1 {
   font-weight: 400;
   color: #293264;
 }
+.question {
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #293264;
+}
 
 /* Layout */
 

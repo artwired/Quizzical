@@ -1,6 +1,6 @@
 // QuestionsComponent.jsx
 import React, { useState, useEffect } from "react";
-
+import he from "he";
 export default function QuestionsComponent({
   question,
   wrongAnswers,
@@ -33,7 +33,7 @@ export default function QuestionsComponent({
 
   return (
     <div className="question-container">
-      <p className="question">{question}</p>
+      <p className="question">{he.decode(question)}</p>
       {shuffledAnswerOptions.map((answer, index) => (
         <div className="answers-container" key={index}>
           <button
@@ -50,7 +50,7 @@ export default function QuestionsComponent({
                 : ""
             }`}
           >
-            {answer}
+            {he.decode(answer)}
           </button>
         </div>
       ))}
