@@ -21,7 +21,8 @@ body {
   text-align: center;
   height: 100dvh;
 }
-h1 {
+h1,
+.answer-txt {
   font-family: "Karla", sans-serif;
   font-size: 1.953rem;
   color: #293264;
